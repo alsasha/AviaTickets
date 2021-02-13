@@ -10,6 +10,11 @@ body {
   background-size: cover;
 }
 
+main > .container, nav > .container, .tickets-sections > .container  {
+  width: 95%;
+  max-width: 1060px;
+}
+
 .d-flex {
   display: flex !important;
 }
@@ -318,14 +323,6 @@ body {
   }
 }
 
-
-
-@media only screen and (min-width: 601px) {
-  main > .container, nav > .container {
-    width: 95%;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .form-field .input-field {
     margin: 0;
@@ -369,10 +366,6 @@ body {
 
   .header .brand-logo {
     font-size: 23px;
-  }
-
-  main > .container, nav > .container {
-    width: 95%;
   }
 
   .favorites .dropdown-content {
