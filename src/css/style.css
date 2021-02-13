@@ -1,0 +1,386 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.btn.border, .select-dropdown, .border {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: inherit;
+}
+
+.btn.dropdown-trigger {
+  padding: 21px 12px;
+}
+
+.btn.dropdown-trigger:focus {
+  background-color: inherit;
+}
+
+.btn.dropdown-trigger:hover {
+  background-color: #f48fb1;
+}
+
+.header {
+  background-color: inherit;
+  box-shadow: none;
+  margin: 20px 0;
+}
+
+.header .brand-logo {
+  position: static;
+}
+
+.header .brand-logo i.material-icons {
+  margin-right: 6px;
+}
+
+.header .hide-on-med-and-down {
+  width: 70px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.header .select-wrapper input.select-dropdown {
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.header .select-wrapper input.select-dropdown:focus {
+  border: none;
+}
+
+.header .select-wrapper .caret {
+  display: none;
+  fill: white;
+}
+
+.header .dropdown-content {
+  box-shadow: none;
+  overflow: inherit;
+}
+
+.header .dropdown-content li>span {
+  color: black;
+}
+
+.form-field .is-selected {
+  color: white;
+}
+
+.tickets-sections .ticket-card {
+  padding: 18px 18px;
+  border-radius: 20px;
+}
+
+.ticket-airline-name {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.ticket-airline-img {
+  max-width: 80px;
+  margin-right: 20px;
+}
+
+.ticket-destination {
+  margin-bottom: 10px;
+  border-bottom: 1px dashed gray;
+}
+
+.ticket-destination .ticket-city {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.ticket-destination i.material-icons {
+  font-size: 26px;
+}
+
+.ticket-time-departure {
+  font-weight: bold;
+  color: gray;
+}
+
+.ticket-price {
+  font-size: 25px;
+  padding: 5px;
+  color: #26c6da;
+}
+
+.ticket-additional-info {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tickets-empty-res-msg {
+  padding: 21px 15px;
+  border-radius: 13px;
+  background: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.favorites {
+  margin-left: 12px;
+}
+
+.favorites .dropdown-content {
+  width: 400px !important;
+  color: #000;
+  border-radius: 11px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.favorites .favorite-item-airline-img {
+  max-width: 100px;
+  margin: 14px 0 10px 10px;
+}
+
+.favorites .favorite-item-info {
+  flex-grow: 1;
+  padding: 10px;
+  line-height: 1;
+  height: auto;
+}
+
+.favorites .favorite-item-info .material-icons {
+  line-height: 1;
+  height: auto;
+}
+
+.favorites .favorite-item-destination {
+  border-bottom: 1px dashed gray;
+  margin-bottom: 5px;
+}
+
+.favorites .favorite-item {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.favorites .ticket-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.favorites .ticket-additional-info {
+  font-size: 12px;
+}
+
+.favorites .ticket-time-departure {
+  font-size: 14px;
+}
+
+.favorites .delete-favorite {
+  margin-top: 10px;
+}
+
+.form-field .card {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2)
+}
+
+.form-inner {
+  flex: 1 1 auto;
+}
+
+.form-field .input-field {
+  flex: auto;
+}
+
+.form-field .input-field input {
+  margin: 0;
+  border: 0;
+  font-size: 20px;
+  box-shadow: 0 0 0 2px #00838f;
+  background-color: white;
+  outline: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  padding: 25px 15px;
+  width: 100%;
+}
+
+.input-field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00838f;
+}
+
+.input-field input.autocomplete--origin {
+  border-radius: 5px 0 0 5px;
+}
+
+.input-field input.datepicker--return {
+  border-radius: 0 5px 5px 0;
+}
+
+.submit-btn {
+  width: 200px;
+  padding: 25px;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.add-favorite {
+  cursor: pointer;
+  padding: 0 0 20px 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .header .hide-on-med-and-down {
+    display: block !important;
+  } 
+
+  .header .brand-logo {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .card-content {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .form-inner {
+    flex-wrap: wrap;
+  }
+
+  .autocomplete--destination {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .datepicker--depart {
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+
+
+@media only screen and (min-width: 601px) {
+  main > .container, nav > .container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-field .input-field {
+    margin: 0;
+  }
+
+  .form-inner {
+    margin: 0 0 1rem;
+  }
+
+  .input-field input.autocomplete--origin {
+    border-radius: 5px 5px 0 5px;
+  }
+
+  .input-field input.autocomplete--destination, 
+  .input-field input.datepicker--depart {
+    border-radius: 0;
+  }
+
+  .input-field input.datepicker--return {
+    border-radius:  0 0 5px 5px;
+  }
+
+  .favorites .dropdown-content {
+    width: 350px !important;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .btn.dropdown-trigger {
+    padding: 21px 12px;
+  }
+
+  .header .select-wrapper input.select-dropdown {
+    padding: 0 5px;
+  }
+
+  .header .hide-on-med-and-down {
+    width: 57px;
+  }
+
+  .header .brand-logo {
+    font-size: 23px;
+  }
+
+  main > .container, nav > .container {
+    width: 95%;
+  }
+
+  .favorites .dropdown-content {
+    width: 280px !important;
+  }
+
+}
+
+
+
+
