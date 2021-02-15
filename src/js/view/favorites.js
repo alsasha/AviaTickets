@@ -64,12 +64,12 @@ class FavoritesUI {
                     class="favorite-item-destination d-flex align-items-center"
                 >
                     <div class="d-flex align-items-center mr-auto">
-                    <span class="favorite-item-city">${ticket.destination_name || ''} </span>
+                    <span class="favorite-item-city">${ticket.origin_name || ''} </span>
                     <i class="medium material-icons">flight_takeoff</i>
                     </div>
                     <div class="d-flex align-items-center">
                     <i class="medium material-icons">flight_land</i>
-                    <span class="favorite-item-city">${ticket.origin_name || ''}</span>
+                    <span class="favorite-item-city">${ticket.destination_name  || ''}</span>
                     </div>
                 </div>
                 <div class="ticket-time-price d-flex align-items-center">

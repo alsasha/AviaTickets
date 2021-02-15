@@ -9,7 +9,7 @@ class TicketsUI {
     renderTickets(tickets) {
         this.clearTickets();
         if (tickets.length === 0) {
-            return this.showMessage();
+            return this.showMessage('По вашему запросу билетов не найдено.');
         }
         let fragment = '';
         const currencySymbol = this.currencySymbol();
@@ -24,8 +24,8 @@ class TicketsUI {
         this.container.innerHTML = '';
     }
 
-    showMessage() {
-        const message = TicketsUI.createMessage();
+    showMessage(msg) {
+        const message = TicketsUI.createMessage(msg);
         this.container.insertAdjacentHTML('afterbegin', message);
     }
 
@@ -45,12 +45,12 @@ class TicketsUI {
                 </div>
                 <div class="ticket-destination d-flex align-items-center">
                   <div class="d-flex align-items-center mr-auto">
-                    <span class="ticket-city">${ticket.destination_name || ''} </span>
+                    <span class="ticket-city">${ticket.origin_name || ''} </span>
                     <i class="medium material-icons ">flight_takeoff</i>
                   </div>
                   <div class="d-flex align-items-center">
                     <i class="medium material-icons">flight_land</i>
-                    <span class="ticket-city">${ticket.origin_name || ''}</span>
+                    <span class="ticket-city">${ticket.destination_name || ''}</span>
                   </div>
                 </div>
                 <div class="ticket-time-price d-flex align-items-center justify-content-between">
@@ -66,10 +66,10 @@ class TicketsUI {
         `;
     }
 
-    static createMessage() {
+    static createMessage(msg) {
         return `
             <div class="tickets-empty-res-msg">
-                По вашему запросу билетов не найдено.
+                ${msg}
             </div>
         `;
     }

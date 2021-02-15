@@ -62,18 +62,27 @@ async function initApp() {
     await locations.init();
     formUI.setAutocomplete(locations.shortCities);
     preloader.hidePreloader();
+    ticketsUI.clearTickets();
+    ticketsUI.showMessage('Загрузка данных завершена');
+    setTimeout(() => ticketsUI.clearTickets(), 4000);
+    
 }
 
 async function onFormSubmit() {
+    ticketsUI.clearTickets();
     if (preloader.checkPreloader()) {
-        return alert('Дождитесь загрузки данных с сервера!');
+        return ticketsUI.showMessage('Дождитесь загрузки данных с сервера!');
     }
     preloader.showPreloader();
     const origin = locations.getCityCodeByCode(formUI.originValue),
-    destination = locations.getCityCodeByCode(formUI.destinationValue),
-    depart_date = formUI.departValue,
-    return_date = formUI.returnValue,
-    currency = currencyUI.currencyValue;
+    destination = locations.getCityCodeByCode(formUI.destinationValue);
+    if (!origin || !destination) {
+        preloader.hidePreloader();
+        return ticketsUI.showMessage("Выберите город и страну из списка!");
+    }
+    const depart_date = formUI.departValue,
+        return_date = formUI.returnValue,
+        currency = currencyUI.currencyValue;
 
     const params = {
         origin,
@@ -93,4 +102,5 @@ async function onFormSubmit() {
 
     ticketsUI.renderTickets(locations.lastSearch);
     preloader.hidePreloader();
+    
 }
